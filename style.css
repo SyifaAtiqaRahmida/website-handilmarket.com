@@ -22,15 +22,24 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #ffffff, #ffffff);
-  color: white;
-  padding: 1rem;
+  background: white;
+  position: fixed;      /* ✅ bikin tetap di atas */
+  top: 0;              /* tempel di bagian atas */
+  left: 0;
+  width: 100%;
+  z-index: 1000;       /* biar nggak ketutupan konten lain */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* kasih bayangan halus */
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .header-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 nav {
   display: flex;
   gap: 1.5rem;
@@ -42,7 +51,7 @@ nav {
 }
 
 .logo-image {
-  height: 70px;        /* Atur tinggi logo */
+  height: 60px;        /* Atur tinggi logo */
   width: auto;         /* Biar proporsi logo tetap */
   display: block;
 }
@@ -227,10 +236,11 @@ nav a:hover {
 }
 
 .section-header p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #64748b;
-  max-width: 600px;
   margin: 0 auto;
+  white-space: nowrap;    /* ✅ paksa satu baris */
+  overflow: hidden;       /* biar tidak keluar layar */
 }
 
 .features-grid {
@@ -373,119 +383,161 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-.tentang-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.6;
-}
-
-
-/* Download Section */
-.download {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  color: white;
-  padding: 5rem 1rem;
-}
-
-.download-content {
-  max-width: 800px;
-  margin: 0 auto;
+/* Keunggulan Section */
+.keunggulan-section {
+  background-color: #ffffff;
+  width: 100vw;                     /* full layar */
+  margin-left: calc(-50vw + 50%);   /* geser biar benar2 full */
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.download-content h3 {
+.keunggulan-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.keunggulan-section p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;   /* biar kontennya tetep rapi */
+  margin: 0 auto;      /* center konten */
+}
+
+.keunggulan-card {
+  background: #f9fafb;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.keunggulan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.keunggulan-icon {
   font-size: 2.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.keunggulan-icon img {
+  width: 50px;     /* sesuaikan ukuran */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.download-section {
+  display: flex;
+  align-items: center;             /* sejajarkan teks dan gambar di tengah vertikal */
+  justify-content: space-between;  /* beri jarak antar sisi */
+  background-color: #1e5bd8;       /* warna biru */
+  color: white;
+  padding: 100px 80px;              /* kasih ruang kanan kiri */
+  flex-wrap: wrap;                 /* biar responsif di layar kecil */
+  gap: 40px;                       /* jarak antara teks dan gambar */
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+/* Bagian teks */
+.download-content {
+  flex: 1;                         /* biar lebar fleksibel */
+  max-width: 80%;                  /* setengah bagian layar */
+  padding-left: 10px;
+}
+
+.download-content h2 {
+  font-size: 2rem;               /* besar tapi tetap dua baris */
+  font-weight: 750;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .download-content p {
-  font-size: 1.25rem;
-  opacity: 0.9;
-  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.benefit-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: left;
-}
-
-.benefit-card h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.benefit-list {
-  list-style: none;
-}
-
-.benefit-list li {
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.benefit-list li::before {
-  content: "•";
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-.download-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
+/* Tombol download */
 .download-btn {
   background: white;
-  color: #3b82f6;
-  padding: 1.25rem 2.5rem;
-  border-radius: 0.75rem;
+  color: #2563EB;
+  padding: 1rem 2rem;
+  border-radius: 15px;
   text-decoration: none;
   font-weight: bold;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-top: 1rem;
 }
 
-.download-btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+/* Bagian gambar */
+.screenshots {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(50px); /* ini yang mindahin gambar lebih ke kanan */
 }
 
-.download-icon {
-  font-size: 2rem;
+.screenshots img {
+  position: absolute;
+  width: 100px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
-.download-text {
-  text-align: left;
+.screenshots img:nth-child(1) {
+  transform: rotate(-15deg) translateX(-180px);
+  z-index: 1;
 }
-
-.download-label {
-  font-size: 0.875rem;
-  opacity: 0.8;
-  display: block;
+.screenshots img:nth-child(2) {
+  transform: rotate(-8deg) translateX(-90px);
+  z-index: 2;
 }
+.screenshots img:nth-child(3) {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 3;
+}
+.screenshots img:nth-child(4) {
+  transform: rotate(8deg) translateX(90px);
+  z-index: 2;
+}
+.screenshots img:nth-child(5) {
+  transform: rotate(15deg) translateX(180px);
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .download-section {
+    flex-direction: column; /* di HP balik jadi atas-bawah */
+    text-align: center;
+    padding: 40px 20px;
+  }
 
-.download-platform {
-  font-size: 1.125rem;
-  display: block;
+  .screenshots {
+    margin-top: 20px;
+  }
+
+  .screenshots img {
+    width: 120px;
+  }
 }
 
 /* Footer */
