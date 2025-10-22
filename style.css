@@ -442,7 +442,7 @@ nav a:hover {
   display: flex;
   align-items: center;             /* sejajarkan teks dan gambar di tengah vertikal */
   justify-content: space-between;  /* beri jarak antar sisi */
-  background-color: #1e5bd8;       /* warna biru */
+  background: linear-gradient(to right, #08c5da, #1e5bd8);       /* warna biru */
   color: white;
   padding: 100px 80px;              /* kasih ruang kanan kiri */
   flex-wrap: wrap;                 /* biar responsif di layar kecil */
@@ -471,6 +471,11 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
+.download-icon {
+  font-size: 2rem; /* ukuran ikon — ubah sesukamu, misal 1.5rem atau 2.5rem */
+  line-height: 1;
+}
+
 /* Tombol download */
 .download-btn {
   background: white;
@@ -494,6 +499,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   transform: translateX(50px); /* ini yang mindahin gambar lebih ke kanan */
+  transform: translateY(-30px); /* naik 30px ke atas */
 }
 
 .screenshots img {
