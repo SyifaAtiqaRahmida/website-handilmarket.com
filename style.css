@@ -94,8 +94,9 @@ nav a:hover {
 .hero {
   background: linear-gradient(to bottom, #ffffff, #ffffff);
   color: rgb(0, 0, 0);
-  padding: 4rem 1rem;
+  padding: 10rem 1rem;
   background-color: #000000;
+  
 }
 
 .hero-content {
@@ -141,6 +142,25 @@ nav a:hover {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto; /* supaya menyesuaikan tinggi konten di HP */
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+}
+
 
 .primary-btn {
   background-color: transparent;
@@ -414,11 +434,14 @@ nav a:hover {
 }
 
 .keunggulan-card {
-  background: #f9fafb;
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  border-radius: 20px;
+ padding-top: 80px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+   position: relative;
+  overflow: visible; /* biar icon boleh keluar */
 }
 
 .keunggulan-card:hover {
@@ -427,16 +450,18 @@ nav a:hover {
 }
 
 .keunggulan-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: -35px; /* naik ke atas */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .keunggulan-icon img {
-  width: 50px;     /* sesuaikan ukuran */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
+
 
 .download-section {
   display: flex;
