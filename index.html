@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handil Market - Platform Periklanan Jual, Beli Jasa, dan Sewa</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KZ3Yl1Yos3lXz5v0yRslABfL7g6O5GBWq1pygJFSVspQ4m5OzKrWufP1xgMec5qI4qz+iD7J8z+4VFe8rwK0A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
-<body>
 
-   <header>
-    <div class="container header-content">
-     <div class="logo">
+<body>
+<header>
+  <div class="container header-content">
+    <!-- Logo -->
+    <div class="logo">
       <img src="logo-handil-market.png" alt="Handil Market" class="logo-image">
     </div>
-      <nav>
-        <a href="#fitur">Fitur</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#kontak">Kontak</a>
-      </nav>
+
+    <!-- Navigasi -->
+    <nav class="nav-links">
+      <a href="#fitur">Fitur</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+        </nav>
       <a href="#download" class="cta-button">Mulai Sekarang</a>
-    </div>
-  </header>
+
+    <!-- Tombol Menu untuk HP -->
+    <div class="menu-toggle">☰</div>
+  </div>
+</header>
+<!-- === HEADER END === -->
   
  <!-- Hero Section -->
 <section class="hero">
@@ -53,31 +67,38 @@
         <p>Handil Market menyediakan berbagai fitur yang memudahkan kamu beriklan dan mengembangkan bisnis secara online.</p>
       </div>
 
-     <div class="features-grid">
-  <div class="feature-card jual" onclick="showFeature('jual')">
-    <div class="feature-icon">💰</div>
-    <h4>Jual</h4>
-    <p>Pasang iklan jualan dengan fitur lengkap dan mudah digunakan</p>
-  </div>
+    <div class="features-grid">
+        <div class="feature-card jual" onclick="showFeature('jual')">
+          <div class="feature-icon">
+            <img src="sell.png" alt="Jual">
+          </div>
+          <h4>Jual</h4>
+          <p>Pasang iklan jualan dengan fitur lengkap dan mudah digunakan</p>
+        </div>
 
-  <div class="feature-card beli" onclick="showFeature('beli')">
-    <div class="feature-icon">🛒</div>
-    <h4>Beli</h4>
-    <p>Temukan produk terbaik dengan harga kompetitif</p>
-  </div>
+        <div class="feature-card beli" onclick="showFeature('beli')">
+          <div class="feature-icon">
+            <img src="buy.png" alt="Beli">
+          </div>
+          <h4>Beli</h4>
+          <p>Temukan produk terbaik dengan harga kompetitif</p>
+        </div>
 
-  <div class="feature-card sewa" onclick="showFeature('sewa')">
-    <div class="feature-icon">🏠</div>
-    <h4>Sewa</h4>
-    <p>Sewa properti dan barang dengan sistem yang aman</p>
-  </div>
+        <div class="feature-card sewa" onclick="showFeature('sewa')">
+          <div class="feature-icon">
+            <img src="buy-home.png" alt="Sewa">
+          </div>
+          <h4>Sewa</h4>
+          <p>Sewa properti dan barang dengan sistem yang aman</p>
+        </div>
 
-  <div class="feature-card jasa" onclick="showFeature('jasa')">
-    <div class="feature-icon">🔧</div>
-    <h4>Jasa</h4>
-    <p>Promosikan keahlian dan jasa profesional Anda</p>
-  </div>
-</div>
+        <div class="feature-card jasa" onclick="showFeature('jasa')">
+          <div class="feature-icon">
+            <img src="service.png" alt="Jasa">
+          </div>
+          <h4>Jasa</h4>
+          <p>Promosikan keahlian dan jasa profesional Anda</p>
+        </div> </div>
         
        <!-- Tutorial Section -->
 <section class="tutorial-section">
@@ -99,19 +120,19 @@
 </section>
 
 
-<!-- Tentang Section -->
 <section id="tentang" class="tentang-section">
   <div class="container">
-    <div class="section-header">
-      <h3>Tentang Handil Market</h3>
-      <p>Informasi singkat mengenai platform Handil Market</p>
-    </div>
+    <div class="tentang-box">
+      
+      <!-- JUDUL di DALAM FRAME PUTIH -->
+      <h3 class="tentang-title">Tentang Handil Market</h3>
 
-    <div class="tentang-content">
-      <p>
-        Handil Market merupakan platform lokal yang memudahkan masyarakat untuk jual beli, sewa, dan promosi jasa secara online. 
-        Fokus utama kami adalah membantu pelaku usaha dan masyarakat Handil Bakti terhubung dalam satu wadah digital yang mudah digunakan.
-      </p>
+      <div class="tentang-content">
+        <div class="tentang-text">
+          <p>
+            Handil Market adalah platform digital lokal yang menghubungkan masyarakat Handil Bakti dan sekitarnya dalam kegiatan jual beli, sewa, serta promosi jasa secara online.
+            Kami hadir untuk mendukung pelaku usaha kecil, UMKM, dan individu agar dapat memperluas jangkauan pasar tanpa batas, dengan sistem yang mudah digunakan dan aman.
+          </p>
     </div>
   </div>
 </section>
@@ -125,7 +146,7 @@
     <!-- Card 1 -->
     <div class="keunggulan-card">
       <div class="keunggulan-icon">
-        <img src="img/cepat-icon.png" alt="Mudah & Cepat">
+        <img src="cepat-icon.png" alt="Mudah & Cepat">
       </div>
       <h4>Mudah & Cepat</h4>
       <p>Pasang dan temukan iklan hanya dalam hitungan menit.</p>
@@ -134,7 +155,7 @@
     <!-- Card 2 -->
     <div class="keunggulan-card">
       <div class="keunggulan-icon">
-        <img src="img/jangkauan-icon.png" alt="Jangkauan Lokal">
+        <img src="jangkauan-icon.png" alt="Jangkauan Lokal">
       </div>
       <h4>Jangkauan Lokal</h4>
       <p>Jangkau lebih banyak pembeli lokal dengan cara yang praktis.</p>
@@ -143,7 +164,7 @@
     <!-- Card 3 -->
     <div class="keunggulan-card">
       <div class="keunggulan-icon">
-        <img src="img/aman-icon.png" alt="Transaksi Aman">
+        <img src="aman-icon.png" alt="Transaksi Aman">
       </div>
       <h4>Transaksi Aman</h4>
       <p>Sistem kami mendukung transaksi yang aman dan terpercaya.</p>
@@ -152,7 +173,7 @@
     <!-- Card 4 -->
     <div class="keunggulan-card">
       <div class="keunggulan-icon">
-        <img src="img/lokal-icon.png" alt="Dukung Pelaku Lokal">
+        <img src="lokal-icon.png" alt="Dukung Pelaku Lokal">
       </div>
       <h4>Dukung Pelaku Lokal</h4>
       <p>Bantu pertumbuhan usaha masyarakat lokal dengan platform digital.</p>
@@ -160,16 +181,14 @@
   </div>
 </section>
 
-
 <section class="download-section">
   <div class="download-content">
     <h2>Mulai Langkah Mudahmu dengan Handil Market!</h2>
     <a href="#" class="download-btn">
-      <span class="download-icon">🤖</span>
-      Download Sekarang
-    </a>
+  <img src="download.png" alt="Download" class="download-icon">
+  Download Sekarang
+</a>
   </div>
-
   <div class="screenshots">
     <img src="ss1.png" alt="Tampilan fitur beranda Handil Market" class="ss ss-center">
     <img src="ss2.png" alt="Tampilan kategori produk Handil Market" class="ss ss-mid-left">
@@ -178,43 +197,29 @@
     <img src="ss5.png" alt="Tampilan profil pengguna Handil Market" class="ss ss-right">
   </div>
 </section>
-
-
+        
   <!-- Footer -->
-   <section id="kontak" class="kontak-section">
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-section">
-          <h4>Handil Market</h4>
-          <p>Platform periklanan terpercaya untuk jual, beli, sewa, dan jasa.</p>
-        </div>
-        <div class="footer-section">
-          <h4>Fitur</h4>
-          <ul>
-            <li>Jual</li>
-            <li>Beli</li>
-            <li>Sewa</li>
-            <li>Jasa</li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Bantuan</h4>
-          <ul>
-            <li>Pusat Bantuan</li>
-            <li>Syarat & Ketentuan</li>
-            <li>Kebijakan Privasi</li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Kontak</h4>
-          <p>
-            Email: <br>
-            Phone: 
-          </p>
-        </div>
-      </div>
-      </section>
+<section class="contact" id="kontak">
+  <div class="container contact-content">
+    <div class="contact-info">
+      <h2>Hubungi Kami</h2>
+      <p>Email: <a href="mailto:handilmarket@gmail.com">handilmarket@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/081909455666" target="_blank">+62 812-3456-7890</a></p>
+      <p>Alamat: Komplek Griya Azzam No. A-14 Semangat Dalam, Alalak Kalimantan Selatan, Indonesia</p>
+    </div>
+    <div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.1248500732745!2d114.61022427398976!3d-3.271214541015299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423f2ffc03efb%3A0x825b38953dcf0f27!2sHexa%20Digital%20Project%20-%20Konsultan%20IT%20-%20Jasa%20Pembuatan%20Website%2C%20Sistem%20Informasi%2C%20dan%20Aplikasi%20Android!5e1!3m2!1sid!2sid!4v1762130984110!5m2!1sid!2sid"
+     width="600" 
+     height="450" 
+     style="border:0;" 
+     allowfullscreen="" 
+     loading="lazy" 
+     referrerpolicy="no-referrer-when-downgrade"
+     ></iframe>
+    </div>
+  </div>
+</section>
+
       <div class="footer-bottom">
         <p>© 2025 Handil Market. All rights reserved.</p>
       </div>
@@ -222,6 +227,13 @@
   </footer>
 
   <!-- Script Feature -->
-  <script src="script.js"></script>
+ <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
