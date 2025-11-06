@@ -357,7 +357,7 @@ header {
 .feature-icon i {
   color: white;
   font-size: 40px;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 .feature-card h4 {
@@ -398,7 +398,7 @@ header {
 
 .tutorial-box p {
   font-size: 0.95rem;
-  color: #292f38;
+  color: #ffffff;
   margin-bottom: 1.5rem;
 }
 
