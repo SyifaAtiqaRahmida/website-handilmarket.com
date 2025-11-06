@@ -51,7 +51,7 @@ header {
   align-items: center;     /* biar sejajar vertikal */
   justify-content: flex-start; /* biar mulai dari kiri */
   gap: 2rem;               /* jarak antar item */
-  margin-left: 530px;      /* ⬅️ geser semua menu ke kanan */
+  margin-left: 0;      /* ⬅️ geser semua menu ke kanan */
 }
 
 .nav-links a {
@@ -99,8 +99,11 @@ header {
   }
 
   /* Tampilkan icon ☰ di HP */
-  .menu-toggle {
+   .menu-toggle {
     display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #000;
   }
 
   /* Sembunyikan nav dulu di HP */
