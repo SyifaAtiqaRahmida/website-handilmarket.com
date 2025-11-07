@@ -48,11 +48,13 @@ header {
 /* === NAVIGASI === */
 .nav-links {
   display: flex;
-  align-items: center;     /* biar sejajar vertikal */
-  justify-content: flex-start; /* biar mulai dari kiri */
-  gap: 2rem;               /* jarak antar item */
-  margin-left: 0;      /* ⬅️ geser semua menu ke kanan */
+  align-items: center;
+  justify-content: flex-end; /* biar posisinya ke kanan */
+  gap: 2rem;
+  margin-left: 30rem; /* hapus margin besar itu */
+  margin-right: 0; /* kasih jarak kecil dari tombol merah */
 }
+
 
 .nav-links a {
   color: #08c5da;
